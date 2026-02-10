@@ -271,4 +271,4 @@ document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
 // Console message for developers
 console.log('%cMiles CAM', 'font-size: 24px; font-weight: bold; color: #9ACD32;');
 console.log('%cAI-Powered Video Monitoring', 'font-size: 14px; color: #666;');
-console.log('%cInterested in joining our team? Contact us at hello@milescam.com', 'font-size: 12px; color: #999;');
+console.log('%cInterested in joining our team? Contact us at victor@milescam.com', 'font-size: 12px; color: #999;');
