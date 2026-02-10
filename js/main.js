@@ -2,6 +2,17 @@
 // MILES CAM - Website JavaScript
 // ============================================
 
+// Email Configuration
+// Forms will send to: oawotokun@gmail.com
+// Display email on site: victor@milescam.com
+
+const RECIPIENT_EMAIL = 'oawotokun@gmail.com';
+const DISPLAY_EMAIL = 'victor@milescam.com';
+
+// Web3Forms Access Key (get free key at https://web3forms.com)
+// This is a simple service that sends emails without requiring backend setup
+const WEB3FORMS_ACCESS_KEY = '5e8a1da5-d4d4-438e-b61b-d90017257daa';
+
 // DOM Elements
 const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
@@ -65,9 +76,46 @@ if (betaForm) {
         submitButton.disabled = true;
         
         try {
-            // In production, this would send to your backend API
-            // For now, we'll simulate a successful submission
-            await simulateFormSubmission(data);
+            // Send email via Web3Forms (simple, no backend required)
+            if (WEB3FORMS_ACCESS_KEY !== 'YOUR_WEB3FORMS_ACCESS_KEY') {
+                const emailBody = `
+New Beta Application from Miles CAM Website
+
+Name: ${data.name}
+Email: ${data.email}
+Company: ${data.company}
+Role: ${data.role}
+Industry: ${data.industry}
+Number of Cameras: ${data.cameras}
+Primary Use Case: ${data['use-case']}
+
+Message:
+${data.message || 'No additional message provided'}
+
+---
+This email was sent from the Miles CAM beta registration form.
+Reply directly to: ${data.email}
+                `.trim();
+
+                await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        access_key: WEB3FORMS_ACCESS_KEY,
+                        subject: `New Beta Application: ${data.name} from ${data.company}`,
+                        from_name: 'Miles CAM Website',
+                        email: RECIPIENT_EMAIL,
+                        message: emailBody,
+                        replyto: data.email
+                    })
+                });
+            } else {
+                // Fallback: log to console if Web3Forms not configured
+                console.log('Beta Application Submitted (Web3Forms not configured):', data);
+                console.log('To enable email notifications, get a free key from https://web3forms.com');
+            }
             
             // Hide form and show success message
             betaForm.style.display = 'none';
@@ -79,19 +127,9 @@ if (betaForm) {
                 block: 'center' 
             });
             
-            // Log data (in production, send to backend)
-            console.log('Beta Application Submitted:', data);
-            
-            // Optional: Send to backend API
-            // await fetch('/api/beta/register', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(data)
-            // });
-            
         } catch (error) {
             console.error('Error submitting form:', error);
-            alert('There was an error submitting your application. Please try again or contact us directly.');
+            alert('There was an error submitting your application. Please try again or contact us directly at victor@milescam.com');
             submitButton.textContent = originalText;
             submitButton.disabled = false;
         }
@@ -114,26 +152,50 @@ if (contactForm) {
         submitButton.disabled = true;
         
         try {
-            // In production, this would send to your backend API
-            await simulateFormSubmission(data);
+            // Send email via Web3Forms (simple, no backend required)
+            if (WEB3FORMS_ACCESS_KEY !== 'YOUR_WEB3FORMS_ACCESS_KEY') {
+                const emailBody = `
+New Contact Form Submission from Miles CAM Website
+
+Name: ${data.name}
+Email: ${data.email}
+Subject: ${data.subject}
+
+Message:
+${data.message}
+
+---
+This email was sent from the Miles CAM contact form.
+Reply directly to: ${data.email}
+                `.trim();
+
+                await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        access_key: WEB3FORMS_ACCESS_KEY,
+                        subject: `Contact Form: ${data.subject}`,
+                        from_name: 'Miles CAM Website',
+                        email: RECIPIENT_EMAIL,
+                        message: emailBody,
+                        replyto: data.email
+                    })
+                });
+            } else {
+                // Fallback: log to console if Web3Forms not configured
+                console.log('Contact Form Submitted (Web3Forms not configured):', data);
+                console.log('To enable email notifications, get a free key from https://web3forms.com');
+            }
             
             // Show success message
             alert('Thank you for your message! We\'ll get back to you soon.');
             contactForm.reset();
             
-            // Log data (in production, send to backend)
-            console.log('Contact Form Submitted:', data);
-            
-            // Optional: Send to backend API
-            // await fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(data)
-            // });
-            
         } catch (error) {
             console.error('Error submitting form:', error);
-            alert('There was an error sending your message. Please try again or email us directly.');
+            alert('There was an error sending your message. Please try again or email us directly at victor@milescam.com');
         } finally {
             submitButton.textContent = originalText;
             submitButton.disabled = false;
@@ -141,14 +203,7 @@ if (contactForm) {
     });
 }
 
-// Simulate form submission (replace with actual API call)
-function simulateFormSubmission(data) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(data);
-        }, 1000);
-    });
-}
+// Note: simulateFormSubmission removed - now using EmailJS directly
 
 // Intersection Observer for Fade-in Animations
 const observerOptions = {
