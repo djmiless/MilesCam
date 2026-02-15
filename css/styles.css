@@ -129,7 +129,8 @@ h1, h2, h3, h4, h5, h6 {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 8px;
+    z-index: 1001;
 }
 
 .nav-toggle span {
@@ -137,6 +138,19 @@ h1, h2, h3, h4, h5, h6 {
     height: 3px;
     background: var(--text-dark);
     transition: var(--transition);
+    border-radius: 2px;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* Hero Section */
@@ -957,6 +971,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -968,6 +986,12 @@ h1, h2, h3, h4, h5, h6 {
         transition: 0.3s;
         box-shadow: var(--shadow-md);
         padding: 2rem 0;
+        gap: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        padding: 1rem 0;
     }
 
     .nav-menu.active {
@@ -978,17 +1002,79 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
     }
 
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    .hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 10px;
+    }
+
     .hero-stats {
-        gap: 2rem;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        flex: 1 1 calc(50% - 0.75rem);
+        min-width: 120px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
     }
 
     .hero-cta {
         flex-direction: column;
+        gap: 0.75rem;
+        padding: 0 10px;
     }
 
-    .beta-content,
-    .contact-content {
-        grid-template-columns: 1fr;
+    .btn {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .problem-solution,
+    .features,
+    .use-cases,
+    .status,
+    .beta,
+    .investors,
+    .contact {
+        padding: 60px 0;
     }
 
     .ps-grid,
@@ -997,32 +1083,203 @@ h1, h2, h3, h4, h5, h6 {
     .status-grid,
     .investors-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .ps-item,
+    .feature-card,
+    .use-case-card,
+    .status-item,
+    .investor-card {
+        padding: 1.75rem;
     }
 
-    .section-title {
-        font-size: 2rem;
+    .beta-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .beta-form-container,
+    .contact-form {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 14px 16px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .contact-info {
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        padding: 1.5rem;
+    }
+
+    .investment-ask {
+        padding: 2rem 1.5rem;
+    }
+
+    .investment-ask h3 {
+        font-size: 1.5rem;
+    }
+
+    .investor-cta {
+        flex-direction: column;
+    }
+
+    .investor-cta .btn {
+        width: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 15px;
+        padding: 0 16px;
     }
 
     .hero {
-        padding: 100px 0 60px;
+        padding: 90px 0 50px;
+    }
+
+    .hero-title {
+        font-size: 1.875rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .stat-item {
+        flex: 1 1 100%;
     }
 
     .stat-number {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .problem-solution,
+    .features,
+    .use-cases,
+    .status,
+    .beta,
+    .investors,
+    .contact {
+        padding: 50px 0;
+    }
+
+    .ps-item,
+    .feature-card,
+    .use-case-card,
+    .status-item,
+    .investor-card {
+        padding: 1.5rem;
+    }
+
+    .feature-icon,
+    .use-case-icon,
+    .ps-icon {
+        font-size: 2.5rem;
+    }
+
+    .beta-form-container,
+    .contact-form {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .beta-form h3,
+    .contact-form h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
     }
 
     .btn {
-        padding: 12px 24px;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    .status-badge,
+    .beta-badge,
+    .investors-badge {
+        font-size: 0.85rem;
+        padding: 0.4rem 1.25rem;
+    }
+
+    .investment-ask {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .investment-ask h3 {
+        font-size: 1.25rem;
+    }
+
+    .investment-ask p {
+        font-size: 1rem;
+    }
+
+    .scroll-indicator {
+        bottom: 20px;
+    }
+
+    .scroll-arrow {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.625rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 12px 18px;
         font-size: 0.9rem;
     }
 }

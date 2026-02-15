@@ -31,7 +31,8 @@ window.addEventListener('scroll', () => {
 
 // Mobile Menu Toggle
 if (navToggle) {
-    navToggle.addEventListener('click', () => {
+    navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
     });
@@ -43,6 +44,17 @@ document.querySelectorAll('.nav-link').forEach(link => {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navMenu && navToggle) {
+        const isClickInsideNav = navMenu.contains(e.target) || navToggle.contains(e.target);
+        if (!isClickInsideNav && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+        }
+    }
 });
 
 // Smooth Scroll for Navigation Links
