@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -54,11 +55,11 @@
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-number">95%+</div>
+                        <div class="stat-number">95<span class="stat-percent">%</span></div>
                         <div class="stat-label">Detection Accuracy</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">&lt; 2s</div>
+                        <div class="stat-number"><span class="stat-less-than">&lt;</span> 2<span class="stat-unit">s</span></div>
                         <div class="stat-label">Alert Latency</div>
                     </div>
                     <div class="stat-item">
@@ -82,12 +83,12 @@
         <div class="container">
             <div class="ps-grid">
                 <div class="ps-item problem">
-                    <div class="ps-icon">❌</div>
+                    <div class="ps-icon"><i class="fas fa-exclamation-triangle"></i></div>
                     <h3>The Problem</h3>
                     <p>Security cameras are everywhere, but they're "dumb" - they only record, they don't analyze. Businesses spend thousands on manual monitoring, miss critical events, and struggle with compliance requirements.</p>
                 </div>
                 <div class="ps-item solution">
-                    <div class="ps-icon">✅</div>
+                    <div class="ps-icon"><i class="fas fa-check-circle"></i></div>
                     <h3>Our Solution</h3>
                     <p>Miles CAM uses state-of-the-art AI (YOLOv8x) to automatically detect people, analyze behavior, and send real-time alerts for medical emergencies, security breaches, and compliance monitoring.</p>
                 </div>
@@ -104,7 +105,7 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🏥</div>
+                    <div class="feature-icon"><i class="fas fa-user-injured"></i></div>
                     <h3>Fall Detection</h3>
                     <p>Life-saving medical emergency alerts in less than 2 seconds. Critical for healthcare facilities, nursing homes, and assisted living.</p>
                     <ul class="feature-list">
@@ -114,7 +115,7 @@
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💊</div>
+                    <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
                     <h3>Overdose Detection</h3>
                     <p>Public health monitoring with automated detection of bent-over positions. Essential for emergency response and public safety.</p>
                     <ul class="feature-list">
@@ -124,7 +125,7 @@
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">👥</div>
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
                     <h3>Crowd Monitoring</h3>
                     <p>Fire safety compliance and capacity management. Automated alerts when maximum capacity is reached.</p>
                     <ul class="feature-list">
@@ -134,7 +135,7 @@
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
                     <h3>Security Alerts</h3>
                     <p>After-hours monitoring and restricted zone detection. 24/7 intelligent protection for your facilities.</p>
                     <ul class="feature-list">
@@ -144,7 +145,7 @@
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
                     <h3>AI-Powered Insights</h3>
                     <p>Natural language queries, automated reports, and mood analysis. Transform data into actionable intelligence.</p>
                     <ul class="feature-list">
@@ -154,7 +155,7 @@
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Real-Time Analytics</h3>
                     <p>Comprehensive dashboard with time-series data, statistics, and trend analysis. Make data-driven decisions.</p>
                     <ul class="feature-list">
@@ -176,7 +177,7 @@
             </div>
             <div class="use-cases-grid">
                 <div class="use-case-card healthcare">
-                    <div class="use-case-icon">🏥</div>
+                    <div class="use-case-icon"><i class="fas fa-hospital"></i></div>
                     <h3>Healthcare</h3>
                     <p>Hospitals, nursing homes, assisted living facilities</p>
                     <ul>
@@ -187,7 +188,7 @@
                     </ul>
                 </div>
                 <div class="use-case-card retail">
-                    <div class="use-case-icon">🛒</div>
+                    <div class="use-case-icon"><i class="fas fa-store"></i></div>
                     <h3>Retail</h3>
                     <p>Stores, malls, restaurants, entertainment venues</p>
                     <ul>
@@ -198,7 +199,7 @@
                     </ul>
                 </div>
                 <div class="use-case-card security">
-                    <div class="use-case-icon">🔒</div>
+                    <div class="use-case-icon"><i class="fas fa-lock"></i></div>
                     <h3>Security</h3>
                     <p>Corporate offices, schools, government facilities</p>
                     <ul>
@@ -209,7 +210,7 @@
                     </ul>
                 </div>
                 <div class="use-case-card public">
-                    <div class="use-case-icon">🚨</div>
+                    <div class="use-case-icon"><i class="fas fa-ambulance"></i></div>
                     <h3>Public Health</h3>
                     <p>Emergency response, public safety monitoring</p>
                     <ul>
@@ -233,32 +234,32 @@
                 
                 <div class="status-grid">
                     <div class="status-item completed">
-                        <div class="status-icon">✅</div>
+                        <div class="status-icon"><i class="fas fa-check-circle"></i></div>
                         <h3>Core System Complete</h3>
                         <p>Production-ready AI video monitoring system with all business use cases implemented. Industry-standard architecture using Frigate NVR and Flask backend.</p>
                     </div>
                     <div class="status-item completed">
-                        <div class="status-icon">✅</div>
+                        <div class="status-icon"><i class="fas fa-check-circle"></i></div>
                         <h3>All Features Implemented</h3>
                         <p>Fall detection, overdose detection, crowd monitoring, security alerts, AI-powered insights, and real-time analytics - all fully functional.</p>
                     </div>
                     <div class="status-item completed">
-                        <div class="status-icon">✅</div>
+                        <div class="status-icon"><i class="fas fa-check-circle"></i></div>
                         <h3>Multi-Platform Support</h3>
                         <p>Deployment options for cloud SaaS, on-premise, edge computing (Jetson Nano), and hybrid architectures. HIPAA-compliant solutions available.</p>
                     </div>
                     <div class="status-item in-progress">
-                        <div class="status-icon">🚧</div>
+                        <div class="status-icon"><i class="fas fa-tools"></i></div>
                         <h3>Beta Testing</h3>
                         <p>Currently recruiting beta customers in healthcare and retail sectors. Validating technology with real-world deployments and building case studies.</p>
                     </div>
                     <div class="status-item in-progress">
-                        <div class="status-icon">🚧</div>
+                        <div class="status-icon"><i class="fas fa-tools"></i></div>
                         <h3>Production Hardening</h3>
                         <p>Implementing production-grade features: PostgreSQL migration, authentication, monitoring, and enhanced security measures.</p>
                     </div>
                     <div class="status-item planned">
-                        <div class="status-icon">📋</div>
+                        <div class="status-icon"><i class="fas fa-calendar-alt"></i></div>
                         <h3>Public Launch</h3>
                         <p>Targeting Q3 2026 for general availability. Scaling infrastructure, expanding support team, and launching marketing campaigns.</p>
                     </div>
@@ -279,23 +280,23 @@
                     <div class="beta-benefits">
                         <h3>Beta Program Benefits</h3>
                         <ul>
-                            <li>✅ Free access during beta period</li>
-                            <li>✅ White-glove setup and installation</li>
-                            <li>✅ Direct access to development team</li>
-                            <li>✅ Influence product roadmap</li>
-                            <li>✅ Early access to new features</li>
-                            <li>✅ Priority support</li>
-                            <li>✅ Case study opportunities</li>
+                            <li><i class="fas fa-check"></i> Free access during beta period</li>
+                            <li><i class="fas fa-check"></i> White-glove setup and installation</li>
+                            <li><i class="fas fa-check"></i> Direct access to development team</li>
+                            <li><i class="fas fa-check"></i> Influence product roadmap</li>
+                            <li><i class="fas fa-check"></i> Early access to new features</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Case study opportunities</li>
                         </ul>
                     </div>
 
                     <div class="beta-requirements">
                         <h3>Ideal Beta Customers</h3>
                         <ul>
-                            <li>🏥 Healthcare facilities (hospitals, nursing homes)</li>
-                            <li>🛒 Retail stores and restaurants</li>
-                            <li>🔒 Corporate offices and schools</li>
-                            <li>🚨 Public health organizations</li>
+                            <li><i class="fas fa-hospital"></i> Healthcare facilities (hospitals, nursing homes)</li>
+                            <li><i class="fas fa-store"></i> Retail stores and restaurants</li>
+                            <li><i class="fas fa-building"></i> Corporate offices and schools</li>
+                            <li><i class="fas fa-ambulance"></i> Public health organizations</li>
                         </ul>
                     </div>
                 </div>
@@ -360,7 +361,7 @@
                         <p class="form-note">We'll review your application and get back to you within 48 hours.</p>
                     </form>
                     <div id="betaSuccess" class="form-success" style="display: none;">
-                        <div class="success-icon">✅</div>
+                        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
                         <h3>Application Submitted!</h3>
                         <p>Thank you for your interest in Miles CAM. We'll review your application and contact you within 48 hours.</p>
                     </div>
@@ -443,22 +444,22 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">📧</div>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <h3>Email</h3>
                         <p><a href="mailto:victor@milescam.com">victor@milescam.com</a></p>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">📞</div>
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <h3>Phone</h3>
                         <p><a href="tel:+16723387914">+1 (672) 338-7914</a></p>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">💼</div>
+                        <div class="contact-icon"><i class="fas fa-briefcase"></i></div>
                         <h3>Enterprise Inquiries</h3>
                         <p>For enterprise deployments, custom integrations, or professional services, please contact us directly.</p>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">🤝</div>
+                        <div class="contact-icon"><i class="fas fa-handshake"></i></div>
                         <h3>Partnerships</h3>
                         <p>Interested in partnering with us? We're looking for camera manufacturers, system integrators, and technology partners.</p>
                     </div>

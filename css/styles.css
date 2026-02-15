@@ -226,11 +226,28 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.stat-percent,
+.stat-unit {
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.stat-less-than {
+    font-size: 1.8rem;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-right: 2px;
 }
 
 .stat-label {
     font-size: 0.9rem;
     opacity: 0.9;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .hero-cta {
@@ -326,6 +343,11 @@ h1, h2, h3, h4, h5, h6 {
 .ps-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.ps-icon i {
+    font-size: 3rem;
 }
 
 .ps-item h3 {
@@ -385,6 +407,19 @@ h1, h2, h3, h4, h5, h6 {
 .feature-icon {
     font-size: 3rem;
     margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(154, 205, 50, 0.1);
+    border-radius: 16px;
+    margin: 0 auto 1.5rem;
+}
+
+.feature-icon i {
+    font-size: 2.5rem;
 }
 
 .feature-card h3 {
@@ -463,6 +498,19 @@ h1, h2, h3, h4, h5, h6 {
 .use-case-icon {
     font-size: 3rem;
     margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: rgba(154, 205, 50, 0.1);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.use-case-icon i {
+    font-size: 2.5rem;
 }
 
 .use-case-card h3 {
@@ -552,6 +600,23 @@ h1, h2, h3, h4, h5, h6 {
 .status-icon {
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.status-icon i {
+    font-size: 2rem;
+}
+
+.status-item.completed .status-icon {
+    color: var(--accent-color);
+}
+
+.status-item.in-progress .status-icon {
+    color: #FF9800;
+}
+
+.status-item.planned .status-icon {
+    color: var(--text-lighter);
 }
 
 .status-item h3 {
@@ -649,22 +714,39 @@ h1, h2, h3, h4, h5, h6 {
 .beta-benefits ul li,
 .beta-requirements ul li {
     padding: 0.75rem 0;
-    padding-left: 1.5rem;
     position: relative;
 }
 
+.beta-benefits ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.beta-benefits ul li i {
+    color: var(--accent-color);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
 .beta-benefits ul li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    font-weight: bold;
+    display: none;
+}
+
+.beta-requirements ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.beta-requirements ul li i {
+    color: var(--primary-color);
+    font-size: 1rem;
+    flex-shrink: 0;
 }
 
 .beta-requirements ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    font-size: 1.5rem;
+    display: none;
 }
 
 .beta-form-container {
@@ -726,6 +808,11 @@ h1, h2, h3, h4, h5, h6 {
 .success-icon {
     font-size: 4rem;
     margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.success-icon i {
+    font-size: 4rem;
 }
 
 .form-success h3 {
@@ -859,6 +946,19 @@ h1, h2, h3, h4, h5, h6 {
 .contact-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(154, 205, 50, 0.1);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.contact-icon i {
+    font-size: 2rem;
 }
 
 .contact-item h3 {
