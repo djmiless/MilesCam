@@ -4,6 +4,7 @@
 
 /* CSS Variables */
 :root {
+    /* Miles CAM (original green) */
     --primary-color: #9ACD32;
     --primary-dark: #7CB342;
     --primary-light: #B8E986;
@@ -413,7 +414,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     width: 80px;
     height: 80px;
-    background: rgba(154, 205, 50, 0.1);
+    background: rgba(154, 205, 50, 0.10);
     border-radius: 16px;
     margin: 0 auto 1.5rem;
 }
@@ -504,7 +505,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     width: 70px;
     height: 70px;
-    background: rgba(154, 205, 50, 0.1);
+    background: rgba(154, 205, 50, 0.10);
     border-radius: 12px;
     margin-bottom: 1.5rem;
 }
@@ -790,7 +791,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(154, 205, 50, 0.2);
+    box-shadow: 0 0 0 3px rgba(154, 205, 50, 0.20);
 }
 
 .form-note {
@@ -952,7 +953,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     width: 60px;
     height: 60px;
-    background: rgba(154, 205, 50, 0.1);
+    background: rgba(154, 205, 50, 0.10);
     border-radius: 12px;
     margin-bottom: 1rem;
 }

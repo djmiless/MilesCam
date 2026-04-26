@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Miles CAM - AI-Powered Video Monitoring. Transform security cameras into intelligent business intelligence platforms with real-time AI detection, fall detection, and compliance monitoring.">
-    <meta name="keywords" content="AI video monitoring, fall detection, healthcare technology, retail analytics, security systems, computer vision">
-    <title>Miles CAM - AI-Powered Video Monitoring | Intelligent Vision for Safer Spaces</title>
+    <meta name="description" content="Miles CAM Overdose Detection is a privacy first, passive monitoring system that helps staff respond faster when someone may have collapsed from an overdose. No wearable. No app. No check in. Designed for sensitive environments.">
+    <meta name="keywords" content="overdose detection, harm reduction technology, supervised consumption site, shelter safety, computer vision, pose estimation, edge AI, privacy first monitoring">
+    <title>Miles CAM Overdose Detection | Passive, privacy first monitoring</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modern.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,9 +23,9 @@
                 </div>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#features" class="nav-link">Features</a></li>
-                    <li><a href="#use-cases" class="nav-link">Use Cases</a></li>
-                    <li><a href="#status" class="nav-link">Status</a></li>
+                    <li><a href="#how" class="nav-link">How it works</a></li>
+                    <li><a href="#privacy" class="nav-link">Privacy</a></li>
+                    <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
                     <li><a href="#beta" class="nav-link">Beta</a></li>
                     <li><a href="#investors" class="nav-link">Investors</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -46,30 +47,30 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="title-line">Intelligent Vision</span>
-                    <span class="title-line">for Safer Spaces</span>
+                    <span class="title-line">Passive Overdose</span>
+                    <span class="title-line">Detection at the Edge</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Transform security cameras into AI-powered business intelligence platforms. 
-                    Real-time detection, instant alerts, and automated compliance monitoring.
+                    Miles CAM Overdose Detection helps staff respond faster when someone may have collapsed from an overdose.
+                    No wearable, no app, no check in. Built for sensitive environments with privacy first design and a human review step.
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-number">95<span class="stat-percent">%</span></div>
-                        <div class="stat-label">Detection Accuracy</div>
+                        <div class="stat-number">Edge</div>
+                        <div class="stat-label">No Cloud Video</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number"><span class="stat-less-than">&lt;</span> 2<span class="stat-unit">s</span></div>
-                        <div class="stat-label">Alert Latency</div>
+                        <div class="stat-label">Signal to Alert</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">HIPAA</div>
-                        <div class="stat-label">Compliant</div>
+                        <div class="stat-number">Review</div>
+                        <div class="stat-label">Human Confirmed</div>
                     </div>
                 </div>
                 <div class="hero-cta">
-                    <a href="#beta" class="btn btn-primary">Join Beta Program</a>
-                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                    <a href="#beta" class="btn btn-primary">Join the Pilot</a>
+                    <a href="#how" class="btn btn-secondary">See How It Works</a>
                 </div>
             </div>
         </div>
@@ -85,183 +86,178 @@
                 <div class="ps-item problem">
                     <div class="ps-icon"><i class="fas fa-exclamation-triangle"></i></div>
                     <h3>The Problem</h3>
-                    <p>Security cameras are everywhere, but they're "dumb" - they only record, they don't analyze. Businesses spend thousands on manual monitoring, miss critical events, and struggle with compliance requirements.</p>
+                    <p>In shelters, supervised consumption sites, and public washrooms, overdoses can happen unseen. Wearables don’t scale, manual check-ins are inconsistent, and most camera systems aren’t built for privacy-sensitive environments.</p>
                 </div>
                 <div class="ps-item solution">
                     <div class="ps-icon"><i class="fas fa-check-circle"></i></div>
                     <h3>Our Solution</h3>
-                    <p>Miles CAM uses state-of-the-art AI (YOLOv8x) to automatically detect people, analyze behavior, and send real-time alerts for medical emergencies, security breaches, and compliance monitoring.</p>
+                    <p>Miles CAM Overdose Detection is passive monitoring designed for real sites. It looks for collapse risk signals, routes them to a staff review queue, and escalates only when confirmed so the system stays trustworthy.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
+    <!-- How It Works Section -->
+    <section id="how" class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Powerful AI Features</h2>
-                <p class="section-subtitle">Enterprise-grade capabilities that save lives and ensure compliance</p>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Three sensing layers, one shared vocabulary, and a safety-first escalation flow</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-user-injured"></i></div>
-                    <h3>Fall Detection</h3>
-                    <p>Life-saving medical emergency alerts in less than 2 seconds. Critical for healthcare facilities, nursing homes, and assisted living.</p>
+                    <div class="feature-icon"><i class="fas fa-video"></i></div>
+                    <h3>Layer 1: Camera (MVP)</h3>
+                    <p>An IP camera streams to a local device. The system finds people in the scene and tracks posture and stillness over time to detect collapse risk.</p>
                     <ul class="feature-list">
-                        <li>Real-time pose estimation</li>
-                        <li>Instant staff notifications</li>
-                        <li>95%+ accuracy rate</li>
+                        <li>Person detection + pose landmarks</li>
+                        <li>Sliding-window posture & stillness checks</li>
+                        <li>Works without cloud video</li>
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3>Overdose Detection</h3>
-                    <p>Public health monitoring with automated detection of bent-over positions. Essential for emergency response and public safety.</p>
+                    <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>Layer 2: RF breathing signal (Phase 2)</h3>
+                    <p>Optional RF sensing can detect tiny breathing rhythm signals that video cannot reliably confirm. This adds a strong second opinion for safety.</p>
                     <ul class="feature-list">
-                        <li>Behavioral pattern analysis</li>
-                        <li>Emergency response integration</li>
-                        <li>Privacy-preserving</li>
+                        <li>Breathing rhythm detection</li>
+                        <li>Detects slowed or missing rhythm</li>
+                        <li>Runs locally</li>
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-users"></i></div>
-                    <h3>Crowd Monitoring</h3>
-                    <p>Fire safety compliance and capacity management. Automated alerts when maximum capacity is reached.</p>
+                    <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Layer 3: Clip understanding (Phase 3)</h3>
+                    <p>Optional clip-level understanding adds scene context over a few seconds of video and improves as your team reviews and labels real events.</p>
                     <ul class="feature-list">
-                        <li>Real-time people counting</li>
-                        <li>Compliance automation</li>
-                        <li>Statistical anomaly detection</li>
+                        <li>Short clip context</li>
+                        <li>Reduces false alarms over time</li>
+                        <li>Improves from review feedback</li>
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Security Alerts</h3>
-                    <p>After-hours monitoring and restricted zone detection. 24/7 intelligent protection for your facilities.</p>
+                    <div class="feature-icon"><i class="fas fa-route"></i></div>
+                    <h3>One decision, multiple signals</h3>
+                    <p>Signals from each layer combine into one final risk level. This reduces false alarms and avoids missing critical events.</p>
                     <ul class="feature-list">
-                        <li>Time-based rule engine</li>
-                        <li>Zone-based detection</li>
-                        <li>Loitering detection</li>
+                        <li>Clear risk levels</li>
+                        <li>Simple labels staff can use</li>
+                        <li>Confidence combines across signals</li>
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
-                    <h3>AI-Powered Insights</h3>
-                    <p>Natural language queries, automated reports, and mood analysis. Transform data into actionable intelligence.</p>
+                    <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Human-in-the-Loop Review</h3>
+                    <p>Alerts first enter a staff review queue. Confirm, mark false alarm, or escalate so the system earns trust and stays usable.</p>
                     <ul class="feature-list">
-                        <li>LLM integration (Ollama)</li>
-                        <li>Automated summarization</li>
-                        <li>Predictive analytics</li>
+                        <li>Blurred / privacy-safe review clips</li>
+                        <li>Audit trail of decisions</li>
+                        <li>Escalation only when confirmed</li>
                     </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Real-Time Analytics</h3>
-                    <p>Comprehensive dashboard with time-series data, statistics, and trend analysis. Make data-driven decisions.</p>
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Edge + Privacy First</h3>
+                    <p>Designed for sensitive environments. Raw video stays on-device; storage is minimal, and privacy protections are built in.</p>
                     <ul class="feature-list">
-                        <li>Historical data logging</li>
-                        <li>Peak hours detection</li>
-                        <li>Alert statistics</li>
+                        <li>No cloud video by default</li>
+                        <li>Configurable retention</li>
+                        <li>Deployment-ready for harm reduction</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Use Cases Section -->
-    <section id="use-cases" class="use-cases">
+    <!-- Privacy Section -->
+    <section id="privacy" class="use-cases">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Built for Your Industry</h2>
-                <p class="section-subtitle">Tailored solutions for healthcare, retail, security, and public safety</p>
+                <h2 class="section-title">Privacy by Design</h2>
+                <p class="section-subtitle">Built to be deployable in real harm reduction environments</p>
             </div>
             <div class="use-cases-grid">
                 <div class="use-case-card healthcare">
-                    <div class="use-case-icon"><i class="fas fa-hospital"></i></div>
-                    <h3>Healthcare</h3>
-                    <p>Hospitals, nursing homes, assisted living facilities</p>
+                    <div class="use-case-icon"><i class="fas fa-server"></i></div>
+                    <h3>Edge first</h3>
+                    <p>Designed so raw video stays on-device by default.</p>
                     <ul>
-                        <li>Fall detection for patient safety</li>
-                        <li>HIPAA-compliant on-premise deployment</li>
-                        <li>Emergency response integration</li>
-                        <li>Patient monitoring automation</li>
-                    </ul>
-                </div>
-                <div class="use-case-card retail">
-                    <div class="use-case-icon"><i class="fas fa-store"></i></div>
-                    <h3>Retail</h3>
-                    <p>Stores, malls, restaurants, entertainment venues</p>
-                    <ul>
-                        <li>Fire safety compliance automation</li>
-                        <li>Capacity management</li>
-                        <li>Customer analytics</li>
-                        <li>Loss prevention</li>
-                    </ul>
-                </div>
-                <div class="use-case-card security">
-                    <div class="use-case-icon"><i class="fas fa-lock"></i></div>
-                    <h3>Security</h3>
-                    <p>Corporate offices, schools, government facilities</p>
-                    <ul>
-                        <li>After-hours monitoring</li>
-                        <li>Restricted zone detection</li>
-                        <li>Loitering detection</li>
-                        <li>Access control integration</li>
+                        <li>No cloud video required</li>
+                        <li>Local processing on edge hardware</li>
+                        <li>Works offline in constrained sites</li>
+                        <li>Configurable retention</li>
                     </ul>
                 </div>
                 <div class="use-case-card public">
-                    <div class="use-case-icon"><i class="fas fa-ambulance"></i></div>
-                    <h3>Public Health</h3>
-                    <p>Emergency response, public safety monitoring</p>
+                    <div class="use-case-icon"><i class="fas fa-eye-slash"></i></div>
+                    <h3>Privacy Protections</h3>
+                    <p>Reduce privacy risk while maintaining operational usefulness.</p>
                     <ul>
-                        <li>Overdose detection</li>
-                        <li>Public space monitoring</li>
-                        <li>Emergency response alerts</li>
-                        <li>Community safety</li>
+                        <li>Face blurring before storage</li>
+                        <li>Minimal stored metadata</li>
+                        <li>Role-based access (planned)</li>
+                        <li>Audit trail for reviews</li>
+                    </ul>
+                </div>
+                <div class="use-case-card security">
+                    <div class="use-case-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Human Review</h3>
+                    <p>Staff remain in the decision loop to prevent trust loss from false alarms.</p>
+                    <ul>
+                        <li>Review queue before escalation</li>
+                        <li>Confirm / dismiss / escalate</li>
+                        <li>Clip-level evidence</li>
+                        <li>Feedback improves models</li>
+                    </ul>
+                </div>
+                <div class="use-case-card retail">
+                    <div class="use-case-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Deployable Sites</h3>
+                    <p>Where passive monitoring can save a life.</p>
+                    <ul>
+                        <li>Supervised consumption sites</li>
+                        <li>Shelters & transitional housing</li>
+                        <li>Public washrooms</li>
+                        <li>Common areas / intake zones</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Current Status Section -->
-    <section id="status" class="status">
+    <!-- Roadmap / Status Section -->
+    <section id="roadmap" class="status">
         <div class="container">
             <div class="status-content">
-                <div class="status-badge">Beta Phase</div>
-                <h2 class="section-title">Where We Are Now</h2>
-                <p class="section-subtitle">Miles CAM is currently in active development and beta testing</p>
+                <div class="status-badge">Phase 1</div>
+                <h2 class="section-title">Roadmap</h2>
+                <p class="section-subtitle">Ship a camera-only MVP first, then add RF sensing and clip-level understanding</p>
                 
                 <div class="status-grid">
-                    <div class="status-item completed">
+                    <div class="status-item in-progress">
                         <div class="status-icon"><i class="fas fa-check-circle"></i></div>
-                        <h3>Core System Complete</h3>
-                        <p>Production-ready AI video monitoring system with all business use cases implemented. Industry-standard architecture using Frigate NVR and Flask backend.</p>
+                        <h3>Phase 1: Camera MVP</h3>
+                        <p>YOLO + pose estimation + rule engine for collapse risk signals, plus a human review queue and basic alert escalation.</p>
                     </div>
                     <div class="status-item completed">
                         <div class="status-icon"><i class="fas fa-check-circle"></i></div>
-                        <h3>All Features Implemented</h3>
-                        <p>Fall detection, overdose detection, crowd monitoring, security alerts, AI-powered insights, and real-time analytics - all fully functional.</p>
-                    </div>
-                    <div class="status-item completed">
-                        <div class="status-icon"><i class="fas fa-check-circle"></i></div>
-                        <h3>Multi-Platform Support</h3>
-                        <p>Deployment options for cloud SaaS, on-premise, edge computing (Jetson Nano), and hybrid architectures. HIPAA-compliant solutions available.</p>
+                        <h3>Edge Deployment Focus</h3>
+                        <p>Privacy-first architecture designed for on-site processing and sensitive environments.</p>
                     </div>
                     <div class="status-item in-progress">
                         <div class="status-icon"><i class="fas fa-tools"></i></div>
-                        <h3>Beta Testing</h3>
-                        <p>Currently recruiting beta customers in healthcare and retail sectors. Validating technology with real-world deployments and building case studies.</p>
-                    </div>
-                    <div class="status-item in-progress">
-                        <div class="status-icon"><i class="fas fa-tools"></i></div>
-                        <h3>Production Hardening</h3>
-                        <p>Implementing production-grade features: PostgreSQL migration, authentication, monitoring, and enhanced security measures.</p>
+                        <h3>Pilot Partnerships</h3>
+                        <p>Recruiting pilot sites in harm reduction, shelters, and transitional housing to validate the MVP and collect real-world feedback.</p>
                     </div>
                     <div class="status-item planned">
                         <div class="status-icon"><i class="fas fa-calendar-alt"></i></div>
-                        <h3>Public Launch</h3>
-                        <p>Targeting Q3 2026 for general availability. Scaling infrastructure, expanding support team, and launching marketing campaigns.</p>
+                        <h3>Phase 2: RF Breathing Signal</h3>
+                        <p>Add ESP32-based RF sensing to detect breathing rhythm changes and strengthen confidence when the camera alone is ambiguous.</p>
+                    </div>
+                    <div class="status-item planned">
+                        <div class="status-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Phase 3: Clip level understanding</h3>
+                        <p>Add a video transformer layer and continuously improve using labels collected naturally in the review workflow.</p>
                     </div>
                 </div>
             </div>
@@ -275,7 +271,7 @@
                 <div class="beta-info">
                     <div class="beta-badge">Join Beta Program</div>
                     <h2 class="section-title">Be Among the First</h2>
-                    <p class="section-subtitle">Join our beta program and help shape the future of AI-powered video monitoring</p>
+                    <p class="section-subtitle">Join the pilot and help shape overdose detection that works in the real world</p>
                     
                     <div class="beta-benefits">
                         <h3>Beta Program Benefits</h3>
@@ -293,10 +289,10 @@
                     <div class="beta-requirements">
                         <h3>Ideal Beta Customers</h3>
                         <ul>
-                            <li><i class="fas fa-hospital"></i> Healthcare facilities (hospitals, nursing homes)</li>
-                            <li><i class="fas fa-store"></i> Retail stores and restaurants</li>
-                            <li><i class="fas fa-building"></i> Corporate offices and schools</li>
-                            <li><i class="fas fa-ambulance"></i> Public health organizations</li>
+                            <li><i class="fas fa-hand-holding-heart"></i> Supervised consumption sites</li>
+                            <li><i class="fas fa-home"></i> Shelters & transitional housing</li>
+                            <li><i class="fas fa-restroom"></i> Public washrooms & supported housing facilities</li>
+                            <li><i class="fas fa-briefcase-medical"></i> Harm reduction and public health organizations</li>
                         </ul>
                     </div>
                 </div>
@@ -324,11 +320,10 @@
                             <label for="industry">Industry *</label>
                             <select id="industry" name="industry" required>
                                 <option value="">Select Industry</option>
-                                <option value="healthcare">Healthcare</option>
-                                <option value="retail">Retail</option>
-                                <option value="security">Security</option>
+                                <option value="harm-reduction">Harm Reduction</option>
+                                <option value="shelter">Shelter / Transitional Housing</option>
                                 <option value="public-health">Public Health</option>
-                                <option value="education">Education</option>
+                                <option value="supported-housing">Supported Housing</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
@@ -345,12 +340,11 @@
                             <label for="use-case">Primary Use Case *</label>
                             <select id="use-case" name="use-case" required>
                                 <option value="">Select Use Case</option>
-                                <option value="fall-detection">Fall Detection</option>
-                                <option value="overdose-detection">Overdose Detection</option>
-                                <option value="crowd-monitoring">Crowd Monitoring</option>
-                                <option value="security-alerts">Security Alerts</option>
-                                <option value="analytics">Analytics & Insights</option>
-                                <option value="multiple">Multiple Use Cases</option>
+                                <option value="overdose-detection">Overdose Detection (Camera MVP)</option>
+                                <option value="review-queue">Human-in-the-Loop Review Workflow</option>
+                                <option value="rf-sensing">RF Breathing Sensing (Phase 2)</option>
+                                <option value="video-transformer">Video Transformer (Phase 3)</option>
+                                <option value="pilot">Pilot Deployment</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -363,7 +357,7 @@
                     <div id="betaSuccess" class="form-success" style="display: none;">
                         <div class="success-icon"><i class="fas fa-check-circle"></i></div>
                         <h3>Application Submitted!</h3>
-                        <p>Thank you for your interest in Miles CAM. We'll review your application and contact you within 48 hours.</p>
+                        <p>Thank you for your interest in Miles CAM Overdose Detection. We'll review your application and contact you within 48 hours.</p>
                     </div>
                 </div>
             </div>
@@ -376,54 +370,54 @@
             <div class="investors-content">
                 <div class="investors-header">
                     <div class="investors-badge">Investment Opportunity</div>
-                    <h2 class="section-title">Join Us in Transforming Video Surveillance</h2>
-                    <p class="section-subtitle">Miles CAM is seeking strategic investors to accelerate growth and market expansion</p>
+                    <h2 class="section-title">Invest in privacy first overdose detection</h2>
+                    <p class="section-subtitle">Miles CAM is seeking strategic investors to accelerate pilots, deployments, and life saving outcomes</p>
                 </div>
 
                 <div class="investors-grid">
                     <div class="investor-card">
                         <h3>Market Opportunity</h3>
                         <ul>
-                            <li>$50B+ video surveillance market</li>
-                            <li>Growing demand for AI-powered analytics</li>
-                            <li>Compliance requirements driving adoption</li>
-                            <li>Cost savings from automation</li>
+                            <li>Large unmet need in harm reduction + shelters</li>
+                            <li>Passive monitoring beats wearables for adoption</li>
+                            <li>Edge privacy unlocks sensitive deployments</li>
+                            <li>Scales from overdose into broader safety</li>
                         </ul>
                     </div>
                     <div class="investor-card">
                         <h3>What We've Built</h3>
                         <ul>
-                            <li>Production-ready AI video monitoring system</li>
-                            <li>All business use cases implemented</li>
-                            <li>Industry-standard architecture</li>
-                            <li>Multi-platform deployment options</li>
-                            <li>95%+ detection accuracy</li>
+                            <li>Camera MVP with posture + stillness signals</li>
+                            <li>Human review queue to control false alarms</li>
+                            <li>RF breathing layer (Phase 2)</li>
+                            <li>Video transformer layer (Phase 3)</li>
+                            <li>Edge first privacy architecture</li>
                         </ul>
                     </div>
                     <div class="investor-card">
                         <h3>Investment Use</h3>
                         <ul>
-                            <li>Sales & Marketing (40%)</li>
-                            <li>Engineering & Scaling (30%)</li>
-                            <li>Operations & Support (20%)</li>
-                            <li>General & Administrative (10%)</li>
+                            <li>Pilot deployments & evaluation</li>
+                            <li>Engineering: camera MVP → RF layer</li>
+                            <li>Data labeling workflow + model improvement</li>
+                            <li>Security, privacy, and production hardening</li>
                         </ul>
                     </div>
                     <div class="investor-card">
                         <h3>Target Metrics</h3>
                         <ul>
-                            <li>6 months: 100 paying customers</li>
-                            <li>12 months: 500 paying customers</li>
-                            <li>18 months: $1M ARR</li>
-                            <li>Year 2: $2M ARR</li>
-                            <li>Year 3: $5M ARR</li>
+                            <li>6 months: 3 to 5 pilots live</li>
+                            <li>12 months: multi site expansion</li>
+                            <li>18 months: repeatable deployment playbook</li>
+                            <li>Year 2: scaled rollouts with partners</li>
+                            <li>Year 3: broader safety monitoring expansion</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="investment-ask">
-                    <h3>Seeking: $500K - $2M Seed Round</h3>
-                    <p>We're looking for investors who share our vision of making AI-powered video monitoring accessible, affordable, and life-saving.</p>
+                    <h3>Investor conversations</h3>
+                    <p>We are speaking with mission-aligned investors and partners. Contact us for the investor deck and details.</p>
                 </div>
 
                 <div class="investor-cta">
@@ -439,7 +433,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get in Touch</h2>
-                <p class="section-subtitle">Have questions? Want to learn more? We'd love to hear from you.</p>
+                <p class="section-subtitle">Pilot sites, partners, and investors. Let’s talk.</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -455,13 +449,13 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-briefcase"></i></div>
-                        <h3>Enterprise Inquiries</h3>
-                        <p>For enterprise deployments, custom integrations, or professional services, please contact us directly.</p>
+                        <h3>Pilot Deployments</h3>
+                        <p>For supervised consumption sites, shelters, and facilities looking to pilot overdose detection, contact us directly.</p>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-handshake"></i></div>
                         <h3>Partnerships</h3>
-                        <p>Interested in partnering with us? We're looking for camera manufacturers, system integrators, and technology partners.</p>
+                        <p>We’re looking for harm reduction partners, operators, and integrators to deploy responsibly and iterate fast.</p>
                     </div>
                 </div>
                 <form id="contactForm" class="contact-form">
@@ -478,9 +472,9 @@
                         <label for="contactSubject">Subject *</label>
                         <select id="contactSubject" name="subject" required>
                             <option value="">Select Subject</option>
-                            <option value="beta">Beta Program</option>
+                            <option value="beta">Pilot / Beta Program</option>
                             <option value="investor">Investment Inquiry</option>
-                            <option value="enterprise">Enterprise Sales</option>
+                            <option value="enterprise">Deployment / Integration</option>
                             <option value="partnership">Partnership</option>
                             <option value="general">General Inquiry</option>
                         </select>
@@ -501,15 +495,15 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Miles CAM</h3>
-                    <p>AI-Powered Video Monitoring</p>
-                    <p class="footer-tagline">Intelligent Vision for Safer Spaces</p>
+                    <p>Miles CAM Overdose Detection</p>
+                    <p class="footer-tagline">Passive, privacy first monitoring that helps save lives</p>
                 </div>
                 <div class="footer-section">
                     <h4>Product</h4>
                     <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#use-cases">Use Cases</a></li>
-                        <li><a href="#status">Status</a></li>
+                        <li><a href="#how">How it works</a></li>
+                        <li><a href="#privacy">Privacy</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -533,6 +527,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Keeps footer link valid without adding a full policy page yet -->
+    <div id="terms" style="position: relative; top: -80px;"></div>
 
     <script src="js/main.js"></script>
 </body>

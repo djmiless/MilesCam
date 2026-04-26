@@ -1,0 +1,374 @@
+/* ============================================
+   Miles CAM Overdose Detection — Modern UI skin
+   Inspired by your demo "glass / iOS" aesthetic.
+   This file is loaded AFTER styles.css to override it.
+   ============================================ */
+
+:root {
+  --primary: #86ef47;
+  --primary-deep: #558b2f;
+  --system-blue: #007aff;
+  --warning: #ff9f0a;
+  --danger: #ff3b30;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-blur: blur(20px);
+  --bg-main: #f2f2f7;
+  --label-primary: #000000;
+  --label-secondary: rgba(60, 60, 67, 0.9);
+  --radius-ios: 24px;
+  --shadow-ios: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+  --transition-ios: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  background-color: var(--bg-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--label-primary);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAVBAR (keep existing IDs/markup) */
+.navbar {
+  margin: 15px 20px;
+  border-radius: var(--radius-ios);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  padding: 0.75rem 1.5rem;
+  box-shadow: var(--shadow-ios);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.nav-content {
+  padding: 0;
+}
+
+.logo-text {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #2d5a27 0%, var(--primary-deep) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--label-secondary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.nav-link::after { display: none; }
+.nav-link:hover { color: #000; }
+
+/* BUTTONS */
+.btn {
+  border-radius: 40px;
+  padding: 14px 32px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  transition: var(--transition-ios);
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #000;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--primary-deep);
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #000;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  padding: 12px 28px;
+}
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.02);
+}
+
+.btn-block { width: 100%; }
+
+/* HERO */
+.hero {
+  background: radial-gradient(circle at top right, #e8f5e9, var(--bg-main));
+  padding: 160px 0 100px;
+  text-align: center;
+  min-height: auto;
+}
+
+.hero-background,
+.hero-gradient,
+.scroll-indicator {
+  display: none;
+}
+
+.hero-title {
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+  color: #000;
+}
+
+.hero-title .title-line {
+  background: linear-gradient(135deg, #2d5a27, var(--primary-deep));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--label-secondary);
+  max-width: 680px;
+  margin: 0 auto 2.25rem;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3rem 0 0;
+}
+
+.hero-stats .stat-item {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  min-width: 160px;
+  box-shadow: var(--shadow-ios);
+}
+
+.hero-stats .stat-number {
+  font-size: 1.8rem;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+  color: #000;
+}
+.hero-stats .stat-label {
+  font-size: 0.78rem;
+  color: var(--label-secondary);
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+/* SECTION HEADERS */
+.section-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+.section-subtitle {
+  color: var(--label-secondary);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 720px;
+}
+
+/* CARDS / GRIDS */
+.features-grid,
+.use-cases-grid,
+.status-grid,
+.investors-grid {
+  gap: 1.25rem;
+}
+
+.feature-card,
+.use-case-card,
+.status-item,
+.investor-card {
+  background: #fff;
+  border-radius: var(--radius-ios);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow-ios);
+  transition: var(--transition-ios);
+}
+
+.feature-card:hover,
+.use-case-card:hover,
+.status-item:hover,
+.investor-card:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  background: rgba(134, 239, 71, 0.15);
+  margin: 0 0 1.25rem 0;
+}
+.feature-icon i { font-size: 1.2rem; color: var(--primary-deep); }
+
+.feature-list li::before {
+  content: "•";
+  color: var(--primary-deep);
+  font-weight: 900;
+}
+
+/* PROBLEM/SOLUTION tiles */
+.problem-solution { padding: 60px 0; }
+.ps-grid { gap: 1.25rem; }
+.ps-item {
+  border-radius: var(--radius-ios);
+  box-shadow: var(--shadow-ios);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.ps-item.problem {
+  background: #fff;
+}
+.ps-item.solution {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(134,239,71,0.10) 100%);
+}
+.ps-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ps-icon i { color: #000; }
+
+/* PRIVACY SECTION: make it dark + premium */
+.use-cases#privacy,
+.privacy-section {
+  background: linear-gradient(135deg, #1a1a1a, #2d5a27);
+  color: #fff;
+}
+.use-cases#privacy .section-title,
+.privacy-section .section-title,
+.use-cases#privacy h3,
+.use-cases#privacy h2 {
+  color: #fff;
+}
+.use-cases#privacy .section-subtitle,
+.privacy-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.use-cases#privacy .use-case-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+.use-cases#privacy .use-case-card p,
+.use-cases#privacy .use-case-card li { color: rgba(255,255,255,0.72); }
+.use-cases#privacy .use-case-card:hover { transform: translateY(-3px); }
+
+/* FORMS */
+.beta {
+  background: radial-gradient(circle at center, #e8f5e9, var(--bg-main));
+  color: #000;
+}
+
+/* The base stylesheet makes beta text white (for dark gradient). Override for light modern beta. */
+.beta-info .section-title,
+.beta-info .section-subtitle,
+.beta-benefits h3,
+.beta-requirements h3 {
+  color: #000;
+}
+
+.beta-badge {
+  background: rgba(134, 239, 71, 0.15);
+  color: var(--primary-deep);
+  border: 1px solid rgba(134, 239, 71, 0.30);
+}
+
+.beta-benefits ul li i,
+.beta-requirements ul li i {
+  color: var(--primary-deep);
+}
+.beta-form-container,
+.contact-form,
+.beta-form {
+  border-radius: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+.beta-form h3,
+.contact-form h3 { letter-spacing: -0.02em; }
+
+input, select, textarea {
+  border-radius: 20px !important;
+  border: 1.5px solid rgba(0, 0, 0, 0.10) !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-deep) !important;
+  box-shadow: none !important;
+}
+
+/* FOOTER */
+.footer {
+  background: #000;
+  color: rgba(255, 255, 255, 0.55);
+  border-top: none;
+}
+.footer .logo-text {
+  -webkit-text-fill-color: unset;
+  background: none;
+  color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .navbar { margin: 10px 12px; }
+  .hero { padding: 140px 0 80px; }
+}
+

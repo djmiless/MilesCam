@@ -91,7 +91,7 @@ if (betaForm) {
             // Send email via Web3Forms (simple, no backend required)
             if (WEB3FORMS_ACCESS_KEY !== 'YOUR_WEB3FORMS_ACCESS_KEY') {
                 const emailBody = `
-New Beta Application from Miles CAM Website
+New Beta Application from Miles CAM Overdose Detection Website
 
 Name: ${data.name}
 Email: ${data.email}
@@ -105,7 +105,7 @@ Message:
 ${data.message || 'No additional message provided'}
 
 ---
-This email was sent from the Miles CAM beta registration form.
+This email was sent from the Miles CAM Overdose Detection beta registration form.
 Reply directly to: ${data.email}
                 `.trim();
 
@@ -117,7 +117,7 @@ Reply directly to: ${data.email}
                     body: JSON.stringify({
                         access_key: WEB3FORMS_ACCESS_KEY,
                         subject: `New Beta Application: ${data.name} from ${data.company}`,
-                        from_name: 'Miles CAM Website',
+                        from_name: 'Miles CAM Overdose Detection',
                         email: RECIPIENT_EMAIL,
                         message: emailBody,
                         replyto: data.email
@@ -167,7 +167,7 @@ if (contactForm) {
             // Send email via Web3Forms (simple, no backend required)
             if (WEB3FORMS_ACCESS_KEY !== 'YOUR_WEB3FORMS_ACCESS_KEY') {
                 const emailBody = `
-New Contact Form Submission from Miles CAM Website
+New Contact Form Submission from Miles CAM Overdose Detection Website
 
 Name: ${data.name}
 Email: ${data.email}
@@ -177,7 +177,7 @@ Message:
 ${data.message}
 
 ---
-This email was sent from the Miles CAM contact form.
+This email was sent from the Miles CAM Overdose Detection contact form.
 Reply directly to: ${data.email}
                 `.trim();
 
@@ -189,7 +189,7 @@ Reply directly to: ${data.email}
                     body: JSON.stringify({
                         access_key: WEB3FORMS_ACCESS_KEY,
                         subject: `Contact Form: ${data.subject}`,
-                        from_name: 'Miles CAM Website',
+                        from_name: 'Miles CAM Overdose Detection',
                         email: RECIPIENT_EMAIL,
                         message: emailBody,
                         replyto: data.email
